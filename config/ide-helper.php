@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 return array(
 
@@ -16,6 +16,17 @@ return array(
 
     /*
     |--------------------------------------------------------------------------
+    | Fluent helpers
+    |--------------------------------------------------------------------------
+    |
+    | Set to true to generate commonly used Fluent methods
+    |
+    */
+
+    'include_fluent' => true,
+
+    /*
+    |--------------------------------------------------------------------------
     | Helper files to include
     |--------------------------------------------------------------------------
     |
@@ -24,7 +35,7 @@ return array(
     |
     */
 
-    'include_helpers' => false,
+    'include_helpers' => true,
 
     'helper_files' => array(
         base_path().'/vendor/laravel/framework/src/Illuminate/Support/helpers.php',
@@ -71,7 +82,7 @@ return array(
             'emergency' => 'Monolog\Logger::addEmergency',
         )
     ),
-    
+
     /*
     |--------------------------------------------------------------------------
     | Interface implementations
@@ -81,7 +92,7 @@ return array(
     | are detected by the helpers, others can be listed below.
     |
     */
-    
+
     'interfaces' => array(
 
     ),
@@ -142,4 +153,16 @@ return array(
      */
     'model_camel_case_properties' => false,
 
+    /*
+    |--------------------------------------------------------------------------
+    | Property Casts
+    |--------------------------------------------------------------------------
+    |
+    | Cast the given "real type" to the given "type".
+    |
+    */
+   'type_overrides' => array(
+        'integer' => 'int',
+        'boolean' => 'bool',
+   ),
 );
